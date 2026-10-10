@@ -26,26 +26,22 @@ Landings are reported in kilograms, but management and stock-assessment work nee
 3. Divide by the calibrated mean individual weight to estimate the number of fish.
 4. Propagate the P10–P90 range and the 95% CI to give a lower, central and upper estimate.
 
-[Add formulas or a short protocol link if you want to publish them.]
-
 ## Run locally
 
 ```r
-install.packages(c("shiny", "dplyr", "ggplot2"))  # adjust to the packages the app uses
+install.packages("shiny")
 shiny::runApp("app")                              # folder containing app.R
 ```
 
 ## Data
 
-The repository contains **example data only**. The full calibration database is not included.
+The app embeds only **aggregate calibration statistics** per species (sample size, mean weight, standard error, P10, P50 and P90). The raw individual measurements are not included in this repository.
 
 ## Project structure
 
 ```
 app/
-  app.R
-  R/            # helper functions
-data-example/   # synthetic or anonymized sample data
+  app.R         # complete Shiny app (UI + server)
 README.md
 ```
 
